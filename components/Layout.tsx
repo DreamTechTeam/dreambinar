@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavbarCustom from "./ui/navbar/Nav-bar";
+import NavbarCustom from "./ui/navbar";
 
 export const siteTitle = "Dreambinar";
 

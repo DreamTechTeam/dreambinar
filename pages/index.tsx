@@ -1,13 +1,14 @@
-import Layout, { siteTitle } from "../components/Layout";
 import Head from "next/head";
+import Layout, { siteTitle } from "../components/Layout";
+
+const homeTitle: String = `Home | ${siteTitle}`;
 
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{homeTitle}</title>
       </Head>
-      <h1>Hello World</h1>
     </Layout>
   );
 }
