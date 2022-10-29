@@ -105,36 +105,34 @@ export default function Footer() {
 
               <ul className="mt-2 space-y-2">
                 {links.map((item, index) => (
-                  <>
-                    <li key={index}>
-                      {group.toLowerCase() === "our partners" ? (
-                        <a
-                          href="https://ummi.ac.id"
-                          className="text-gray-600 transition-colors duration-300 hover:text-green-700"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <Image
-                            src={item?.imgSrc}
-                            alt="logo-ummi"
-                            loader={({ src }) => src}
-                            unoptimized={true}
-                            width={item?.width}
-                            height={item?.height}
-                          />
-                        </a>
-                      ) : (
-                        <Link
-                          href={item.path}
-                          className="text-gray-600 transition-colors duration-300 hover:text-green-700"
-                          target={item.blank ? "_blank" : ""}
-                          referrerPolicy={item.blank ? "no-referrer" : ""}
-                        >
-                          {item.title}
-                        </Link>
-                      )}
-                    </li>
-                  </>
+                  <li key={index}>
+                    {group.toLowerCase() === "our partners" ? (
+                      <a
+                        href="https://ummi.ac.id"
+                        className="text-gray-600 transition-colors duration-300 hover:text-green-700"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image
+                          src={item?.imgSrc}
+                          alt="logo-ummi"
+                          loader={({ src }) => src}
+                          unoptimized={true}
+                          width={item?.width}
+                          height={item?.height}
+                        />
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.path}
+                        className="text-gray-600 transition-colors duration-300 hover:text-green-700"
+                        target={item.blank ? "_blank" : ""}
+                        referrerPolicy={item.blank ? "no-referrer" : ""}
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
