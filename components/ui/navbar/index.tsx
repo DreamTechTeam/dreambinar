@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { navbarLinks } from "../../../utils/data";
 import classes from "./Navbar.module.css";
 
-const Navbar = () => {
+export default function Navbar() {
   const router = useRouter();
 
   const [navFixed, setNavFixed] = useState("");
@@ -100,6 +100,4 @@ const Navbar = () => {
       </div>
     </header>
   );
-};
-
-export default Navbar;
+}

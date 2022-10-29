@@ -5,6 +5,9 @@ import { Button, Label, TextInput, Textarea, Accordion } from "flowbite-react";
 import { useForm } from "react-hook-form";
 import Footer from "../../components/ui/footer";
 import { developersData } from "../../utils/data";
+import { siteTitle } from "../../components/Layout";
+
+const pageTitle: String = `About Us | ${siteTitle}`;
 
 export default function About() {
   const {
@@ -21,7 +24,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us | Dreambinar</title>
+        <title>{pageTitle}</title>
       </Head>
 
       <header>

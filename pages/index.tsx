@@ -11,7 +11,7 @@ import FeatureCard from "../components/ui/FeatureCard";
 import OrmawaCard from "../components/ui/OrmawaCard";
 import { eventsData, featuresData, ormawaData } from "../utils/data";
 
-const homeTitle: String = `Home | ${siteTitle}`;
+const pageTitle: String = `Home | ${siteTitle}`;
 
 export default function Home() {
   const [populate, setPopulate] = useState(0);
@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>{homeTitle}</title>
+        <title>{pageTitle}</title>
       </Head>
 
       <div>

@@ -8,7 +8,13 @@ interface Props {
   height: number;
 }
 
-const FeatureCard = ({ title, imgUrl, desc, width, height }: Props) => {
+export default function FeatureCard({
+  title,
+  imgUrl,
+  desc,
+  width,
+  height,
+}: Props) {
   return (
     <div className="w-full md:w-1/2 lg:w-1/4 px-4">
       <div className=" p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-lg mb-8">
@@ -28,6 +34,4 @@ const FeatureCard = ({ title, imgUrl, desc, width, height }: Props) => {
       </div>
     </div>
   );
-};
-
-export default FeatureCard;
+}

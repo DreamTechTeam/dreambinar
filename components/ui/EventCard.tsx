@@ -24,7 +24,7 @@ interface Props {
   dateEnd: string;
 }
 
-const EventCard = ({
+export default function EventCard({
   id,
   title,
   imgUrl,
@@ -34,7 +34,7 @@ const EventCard = ({
   isOnline,
   dateStart,
   dateEnd,
-}: Props) => {
+}: Props) {
   const dateEvent = `${dateFormatted(dateStart)} - ${dateFormatted(dateEnd)}`;
 
   return (
@@ -150,6 +150,4 @@ const EventCard = ({
       </Link>
     </div>
   );
-};
-
-export default EventCard;
+}

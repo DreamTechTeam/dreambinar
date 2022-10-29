@@ -2,8 +2,11 @@ import Image from "next/image";
 import React from "react";
 import Router from "next/router";
 import Head from "next/head";
+import { siteTitle } from "../components/Layout";
 
-const NotFound = () => {
+const pageTitle: String = `Page Not Found | ${siteTitle}`;
+
+export default function NotFound() {
   const navigateHome = () => {
     Router.push("/");
   };
@@ -11,7 +14,7 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>404 - Dreambinar</title>
+        <title>{pageTitle}</title>
       </Head>
 
       <article>
@@ -53,6 +56,4 @@ const NotFound = () => {
       </article>
     </>
   );
-};
-
-export default NotFound;
+}
