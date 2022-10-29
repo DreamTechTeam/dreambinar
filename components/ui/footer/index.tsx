@@ -93,7 +93,7 @@ const data = [
 export default function Footer() {
   return (
     <footer>
-      <div className="py-4 mx-auto sm:max-w-xl container px-8 sm:px-0 md:px-8 lg:px-8 xl:px-9 w-screen md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1325px] max-w-[1325px]">
+      <div className="py-4 sm:max-w-xl container px-8 sm:px-0 md:px-8 lg:px-8 xl:px-9 w-screen md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1325px] max-w-[1325px]">
         <div className="grid gap-8 lg:gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
             <Link href="/" className="inline-flex items-center">
@@ -106,9 +106,7 @@ export default function Footer() {
                 height={36}
                 className="h-8 w-auto"
               />
-              <span className="ml-2 text-xl font-black font-sans tracking-wide text-gray-800 uppercase">
-                Dreambinar
-              </span>
+              <span className="ml-2 text-lg font-black block">Dreambinar</span>
             </Link>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-gray-800">
