@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import classes from "./Navbar.module.css";
 
-const NavbarCustom = () => {
+const Navbar = () => {
   const router = useRouter();
   const navbarLinks = [
     { to: "/", title: "Home" },
@@ -21,7 +21,7 @@ const NavbarCustom = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 100;
+      const show = window.scrollY > 80;
       if (show) {
         setNavFixed("navbar-fixed");
       } else {
@@ -106,4 +106,4 @@ const NavbarCustom = () => {
   );
 };
 
-export default NavbarCustom;
+export default Navbar;

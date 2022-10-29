@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Footer from "./ui/footer";
-import NavbarCustom from "./ui/navbar";
+import Navbar from "./ui/navbar";
 
 export const siteTitle = "Dreambinar";
 
@@ -27,11 +27,9 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <NavbarCustom />
+      <Navbar />
       <main>{children}</main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
