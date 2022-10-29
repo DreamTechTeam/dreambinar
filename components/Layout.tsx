@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./ui/footer";
 import NavbarCustom from "./ui/navbar";
 
 export const siteTitle = "Dreambinar";
@@ -28,6 +29,9 @@ export default function Layout({ children }: LayoutProps) {
 
       <NavbarCustom />
       <main>{children}</main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
