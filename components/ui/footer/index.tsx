@@ -57,7 +57,7 @@ export default function Footer() {
                       ) : (
                         <Link
                           href={item.path}
-                          className="text-gray-600 transition-colors duration-300 hover:text-green-700"
+                          className="text-gray-600 text-sm transition-colors duration-300 hover:text-green-700"
                           target={item.blank ? "_blank" : ""}
                           referrerPolicy={item.blank ? "no-referrer" : ""}
                         >
