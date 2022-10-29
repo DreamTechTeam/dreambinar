@@ -1,9 +1,10 @@
 import Head from "next/head";
-import NavBar from "../components/ui/navbar/index";
-import AboutList from "../components/ui/about/AboutList";
+import NavBar from "../../components/ui/navbar/index";
+import AboutList from "../../components/ui/about/AboutList";
 import { Button, Label, TextInput, Textarea, Accordion } from "flowbite-react";
 import { useForm } from "react-hook-form";
-import Footer from "../components/ui/footer";
+import Footer from "../../components/ui/footer";
+import { developersData } from "../../utils/data";
 
 export default function About() {
   const {
@@ -12,71 +13,6 @@ export default function About() {
     formState: { errors },
     reset,
   } = useForm();
-
-  const developersQuery = {
-    data: [
-      {
-        name: "Ikram Maulana",
-        position: "Full Stack Developer",
-        profileImg:
-          "https://res.cloudinary.com/dreamtechteam/image/upload/v1658026276/ikram_23108612fa.png",
-        socialMedia: [
-          {
-            name: "LinkedIn",
-            path: "https://www.linkedin.com/in/ikram-maulana/",
-          },
-          {
-            name: "Instagram",
-            path: "https://www.instagram.com/ikram_maulana/",
-          },
-          {
-            name: "Github",
-            path: "https://www.github.com/ikram-maulana/",
-          },
-        ],
-      },
-      {
-        name: "Deri Kurniawan",
-        position: "Full Stack Developer",
-        profileImg:
-          "https://res.cloudinary.com/dreamtechteam/image/upload/v1658025758/Deri_b9238ce23b.png",
-        socialMedia: [
-          {
-            name: "LinkedIn",
-            path: "https://www.linkedin.com/in/deri-kurniawan/",
-          },
-          {
-            name: "Instagram",
-            path: "https://www.instagram.com/deri561/",
-          },
-          {
-            name: "Github",
-            path: "https://www.github.com/deri-kurniawan",
-          },
-        ],
-      },
-      {
-        name: "M. Drajat Ramdhani",
-        position: "Frontend Developer",
-        profileImg:
-          "https://res.cloudinary.com/dreamtechteam/image/upload/v1658026276/drajat_e57c27e82d.png ",
-        socialMedia: [
-          {
-            name: "LinkedIn",
-            path: "https://www.linkedin.com/in/muhammad-drajat-ramdhani-990a90220/",
-          },
-          {
-            name: "Instagram",
-            path: "https://www.instagram.com/ramdrajat_",
-          },
-          {
-            name: "Github",
-            path: "https://github.com/drajatdani1892/drajatdani1892",
-          },
-        ],
-      },
-    ],
-  };
 
   const onSubmit = async (data: any) => {
     console.log(data);
@@ -120,7 +56,7 @@ export default function About() {
             </p>
           </div>
 
-          <AboutList developers={developersQuery.data} />
+          <AboutList developers={developersData.data} />
         </div>
 
         <div className="mt-8 md:mt-12 lg:mt-16">

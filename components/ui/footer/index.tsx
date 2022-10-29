@@ -1,94 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
-
-const data = [
-  {
-    group: "Menu",
-    links: [
-      {
-        title: "Home",
-        path: "/",
-        imgSrc: "",
-        blank: false,
-        width: 0,
-        height: 0,
-      },
-      {
-        title: "Events",
-        path: "/events",
-        imgSrc: "",
-        blank: false,
-        width: 0,
-        height: 0,
-      },
-      {
-        title: "About Us",
-        path: "/about",
-        imgSrc: "",
-        blank: false,
-        width: 0,
-        height: 0,
-      },
-    ],
-  },
-  {
-    group: "Follow Us",
-    links: [
-      {
-        title: "Facebook",
-        path: "https://www.facebook.com/dreamtechteam",
-        imgSrc: "",
-        blank: true,
-        width: 0,
-        height: 0,
-      },
-      {
-        title: "Instagram",
-        path: "https://www.instagram.com/dreamtechteam",
-        imgSrc: "",
-        blank: true,
-        width: 0,
-        height: 0,
-      },
-    ],
-  },
-  {
-    group: "Support Us",
-    links: [
-      {
-        title: "Buy Me A Coffee",
-        path: "https://www.buymeacoffee.com/DreamTechTeam",
-        imgSrc: "",
-        blank: true,
-        width: 0,
-        height: 0,
-      },
-      {
-        title: "Patreon",
-        path: "https://www.patreon.com/DreamTechTeam",
-        imgSrc: "",
-        blank: true,
-        width: 0,
-        height: 0,
-      },
-    ],
-  },
-  {
-    group: "Our Partners",
-    links: [
-      {
-        title: "Universitas Muhammadiah Sukabumi",
-        path: "https://www.ummi.ac.id/",
-        imgSrc:
-          "https://res.cloudinary.com/dreamtechteam/image/upload/v1658112095/logopartnerummi_of8nbd.png",
-        blank: true,
-        width: 157.67,
-        height: 35.75,
-      },
-    ],
-  },
-];
+import { footerData } from "../../../utils/data";
 
 export default function Footer() {
   return (
@@ -116,7 +29,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-            {data.map(({ group, links }, index) => (
+            {footerData.map(({ group, links }, index) => (
               <div key={index}>
                 <p className="font-semibold tracking-wide text-gray-800">
                   {group}

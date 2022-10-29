@@ -4,15 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { navbarLinks } from "../../../utils/data";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
   const router = useRouter();
-  const navbarLinks = [
-    { to: "/", title: "Home" },
-    { to: "/events", title: "Events" },
-    { to: "/about", title: "About Us" },
-  ];
 
   const [navFixed, setNavFixed] = useState("");
   const navRef = useRef<string | null>(null);
