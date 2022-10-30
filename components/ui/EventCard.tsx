@@ -38,14 +38,14 @@ export default function EventCard({
   const dateEvent = `${dateFormatted(dateStart)} - ${dateFormatted(dateEnd)}`;
 
   return (
-    <div className="overflow-hidden shadow-lg rounded-lg h-full w-full m-auto">
+    <div className="w-full h-full m-auto overflow-hidden rounded-lg shadow-lg">
       <Link href={`/events/${id}`}>
-        <div className="w-full block relative">
+        <div className="relative block w-full">
           <Image
             loader={({ src }) => src}
             alt={title}
             src={imgUrl}
-            className="md:h-64 lg:h-40 w-full object-cover"
+            className="object-cover w-full md:h-64 lg:h-40"
             objectFit="cover"
             width={320}
             height={150}
@@ -54,7 +54,7 @@ export default function EventCard({
           {isOnline ? (
             <div className="absolute top-0 right-0 mt-2 mr-2 text-white z-10 backdrop-brightness-50 backdrop-blur-lg rounded-lg py-1 px-3 w-[7rem]">
               <div className="flex flex-wrap -mx-1 overflow-hidden">
-                <div className="my-1 w-1/2 overflow-hidden text-sm font-black font-sans flex justify-start items-center">
+                <div className="flex items-center justify-start w-1/2 my-1 overflow-hidden font-sans text-sm font-black">
                   Online
                 </div>
                 <div
@@ -71,7 +71,7 @@ export default function EventCard({
           ) : (
             <div className="absolute top-0 right-0 mt-2 mr-2 text-white z-10 backdrop-brightness-50 backdrop-blur-lg rounded-lg py-1 px-3 w-[7.5rem]">
               <div className="flex flex-wrap -mx-1 overflow-hidden">
-                <div className="my-1 w-1/2 overflow-hidden text-sm font-black font-sans flex justify-start items-center">
+                <div className="flex items-center justify-start w-1/2 my-1 overflow-hidden font-sans text-sm font-black">
                   Offline
                 </div>
                 <div
@@ -86,30 +86,30 @@ export default function EventCard({
           )}
         </div>
         <div className={`p-4`}>
-          <div className="w-full block h-full">
+          <div className="block w-full h-full">
             {title.length > 24 ? (
               <>
-                <p className="overflow-hidden text-ellipsis text-gray-800 dark:text-white text-xl h-14 font-black font-sans mb-1">
+                <p className="mb-1 overflow-hidden font-sans text-xl font-black text-gray-800 text-ellipsis dark:text-white h-14">
                   {title}
                 </p>
               </>
             ) : (
-              <p className="text-gray-800 dark:text-white text-xl h-14 font-black font-sans mb-1">
+              <p className="mb-1 font-sans text-xl font-black text-gray-800 dark:text-white h-14">
                 {title}
               </p>
             )}
             {isExpired(dateEnd) ? (
-              <p className="text-md font-medium mb-2">Event Expired</p>
+              <p className="mb-2 font-medium text-md">Event Expired</p>
             ) : (
               <>
-                <p className="text-md font-medium mb-2 block lg:hidden xl:block">
+                <p className="block mb-2 font-medium text-md lg:hidden xl:block">
                   {dateFormatted(dateStart) === dateFormatted(dateEnd)
                     ? dateFormatted(dateStart)
                     : dateEvent.length > 27
                     ? `${dateEvent.slice(0, 27)}...`
                     : dateEvent}
                 </p>
-                <p className="text-md font-medium mb-2 hidden lg:block xl:hidden">
+                <p className="hidden mb-2 font-medium text-md lg:block xl:hidden">
                   {dateFormatted(dateStart) === dateFormatted(dateEnd)
                     ? dateFormatted(dateStart)
                     : dateEvent.length > 20
@@ -124,23 +124,23 @@ export default function EventCard({
           </div>
         </div>
       </Link>
-      <Link href={`/user/${user_id.id}`}>
+      <Link href={`/users/${user_id.id}`}>
         <div className="p-4 pt-0">
-          <div className="border-t-2 my-3"></div>
+          <div className="my-3 border-t-2"></div>
           <div className="flex items-center">
             <div className="block">
               <Image
                 loader={({ src }) => src}
                 src={user_id.imgUrl}
                 alt={user_id.name}
-                className="mx-auto object-cover rounded-full h-10 w-10"
+                className="object-cover w-10 h-10 mx-auto rounded-full"
                 objectFit="cover"
                 width={40}
                 height={40}
                 unoptimized={true}
               />
             </div>
-            <p className="text-gray-800 dark:text-white text-sm ml-4">
+            <p className="ml-4 text-sm text-gray-800 dark:text-white">
               {user_id.name.length > 24
                 ? user_id.name.slice(0, 24) + "..."
                 : user_id.name}
