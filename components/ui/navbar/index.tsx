@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 80;
+      const show = window.scrollY > 0;
       if (show) {
         setNavFixed("navbar-fixed");
       } else {
