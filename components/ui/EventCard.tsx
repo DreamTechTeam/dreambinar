@@ -39,7 +39,7 @@ export default function EventCard({
 
   return (
     <div className="w-full h-full m-auto overflow-hidden rounded-lg shadow-lg">
-      <Link href={`/events/${id}`}>
+      <Link href={`/events/${id}`} legacyBehavior>
         <div className="relative block w-full">
           <Image
             loader={({ src }) => src}
@@ -124,7 +124,7 @@ export default function EventCard({
           </div>
         </div>
       </Link>
-      <Link href={`/users/${user_id.id}`}>
+      <Link href={`/users/${user_id.id}`} legacyBehavior>
         <div className="p-4 pt-0">
           <div className="my-3 border-t-2"></div>
           <div className="flex items-center">

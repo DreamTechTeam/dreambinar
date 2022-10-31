@@ -80,7 +80,7 @@ export default function Navbar() {
                           ? classes["link-active"]
                           : classes["link-inactive"]
                       }`}
-                    >
+                      legacyBehavior>
                       {link.title}
                     </Link>
                   </li>

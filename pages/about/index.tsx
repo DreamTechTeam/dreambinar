@@ -255,7 +255,7 @@ export default function About() {
                       <Link
                         href="/about"
                         className="text-blue-600 hover:underline dark:text-blue-500"
-                      >
+                        legacyBehavior>
                         {" "}
                         sit amet consectetur
                       </Link>{" "}
