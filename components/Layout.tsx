@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ScrollToTop from "react-scroll-to-top";
 import Footer from "./ui/footer";
 import Navbar from "./ui/navbar";
 
@@ -28,7 +29,10 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
 
       <Navbar />
-      <main>{children}</main>
+      <main>
+        {children}
+        <ScrollToTop smooth={true} color="white" width="20" height="20" />
+      </main>
       <Footer />
     </div>
   );

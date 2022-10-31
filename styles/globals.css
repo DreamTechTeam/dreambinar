@@ -10,3 +10,7 @@ body {
 footer {
   @apply mx-auto;
 }
+
+.scroll-to-top {
+  @apply flex justify-center items-center bg-[#046C4E] lg:bottom-20 !important;
+}
