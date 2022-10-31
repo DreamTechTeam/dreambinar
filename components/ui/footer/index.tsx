@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="py-4 sm:max-w-xl container px-8 sm:px-0 md:px-8 lg:px-8 xl:px-9 w-screen md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1325px] max-w-[1325px]">
         <div className="grid gap-8 lg:gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
-            <Link href="/" className="inline-flex items-center" legacyBehavior>
+            <Link href="/" className="inline-flex items-center" >
               <Image
                 src="https://res.cloudinary.com/dreamtechteam/image/upload/v1657935772/dreambinar-logo_xrye3d.png"
                 alt="dreambinar-logo"
@@ -44,7 +44,7 @@ export default function Footer() {
                           className="text-gray-600 transition-colors duration-300 hover:text-green-700"
                           target="_blank"
                           rel="noreferrer"
-                          legacyBehavior>
+                          >
                           <Image
                             src={item?.imgSrc}
                             alt="logo-ummi"
@@ -60,7 +60,7 @@ export default function Footer() {
                           className="text-gray-600 text-sm transition-colors duration-300 hover:text-green-700"
                           target={item.blank ? "_blank" : ""}
                           referrerPolicy={item.blank ? "no-referrer" : ""}
-                          legacyBehavior>
+                          >
                           {item.title}
                         </Link>
                       )}

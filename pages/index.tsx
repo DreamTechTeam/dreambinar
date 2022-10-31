@@ -189,7 +189,7 @@ export default function Home() {
                 ))}
                 {/* grid full 1-3 */}
                 <div className="md:col-span-3 lg:col-auto overflow-hidden h-full w-full m-auto flex justify-center items-center mt-2 md:mt-4 lg:mt-0">
-                  <Link href="/events" legacyBehavior>
+                  <Link href="/events">
                     <h1 className="text-lg md:text-xl font-black font-sans text-center mb-2 overflow-hidden text-ellipsis text-gray-800 dark:text-white">
                       Show More <AiOutlineArrowRight className="inline-block" />
                     </h1>
