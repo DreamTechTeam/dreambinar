@@ -34,8 +34,8 @@ export default function Navbar() {
   return (
     <header
       className={`${
-        classes[navFixed] ? classes[navFixed] : ""
-      } bg-transparent absolute top-0 left-0 w-full flex items-center z-10 transition-all`}
+        classes[navFixed] ? classes[navFixed] : "z-[999]"
+      } bg-transparent absolute top-0 left-0 w-full flex items-center transition-all`}
     >
       <div className="container">
         <div className="flex items-center justify-between relative">
@@ -67,7 +67,7 @@ export default function Navbar() {
               id="nav-menu"
               className={`${
                 classes[navFixed] ? "mt-4 md:mt-0" : ""
-              } hidden absolute py-5 bg-white shadow-lg rounded-lg w-full right-0 top-full md:block md:static md:bg-transparent md:max-w-full md:shadow-none md:rounded-none`}
+              } hidden absolute py-5 bg-white shadow-lg rounded-lg w-full right-0 top-full md:block md:static md:bg-transparent md:max-w-full md:shadow-none md:rounded-none z-20`}
               ref={menuRef}
             >
               <ul className="block md:flex">
