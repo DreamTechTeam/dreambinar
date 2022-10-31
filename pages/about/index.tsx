@@ -28,7 +28,7 @@ export default function About() {
         <title>{pageTitle}</title>
       </Head>
 
-      <div>
+      <div className="mx-auto max-w-[1325px]">
         {/* Hero About */}
         <section className="h-screen flex items-center relative">
           <div className="container absolute z-10">
