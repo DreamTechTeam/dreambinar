@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import Layout, { siteTitle } from "../../components/Layout";
 import DeveloperCard from "../../components/ui/DeveloperCard";
+import Particle from "../../components/ui/Particle";
 import { developersData } from "../../utils/data";
 
 const pageTitle: String = `About Us | ${siteTitle}`;
@@ -29,8 +30,8 @@ export default function About() {
 
       <div>
         {/* Hero About */}
-        <section className="h-screen flex items-center">
-          <div className="container">
+        <section className="h-screen flex items-center relative">
+          <div className="container absolute z-10">
             <div className="w-full mx-auto px-4 mt-10 md:mt-0">
               <h1 className="text-2xl md:text-3xl lg:text-[40px] xl:text-[42px] font-black font-sans flex flex-col text-center lg:gap-2">
                 Know More
@@ -46,6 +47,7 @@ export default function About() {
               </p>
             </div>
           </div>
+          <Particle />
         </section>
         {/* End Hero */}
 
