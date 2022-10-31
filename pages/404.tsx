@@ -1,8 +1,9 @@
 import Image from "next/legacy/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Router from "next/router";
 import Head from "next/head";
 import { siteTitle } from "../components/Layout";
+import Link from "next/link";
 
 const pageTitle: String = `Page Not Found | ${siteTitle}`;
 
@@ -11,49 +12,38 @@ export default function NotFound() {
     Router.push("/");
   };
 
+  useEffect(() => {
+    setTimeout(navigateHome, 3000);
+  }, []);
+
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
       </Head>
 
-      <article>
-        <div className="flex items-center flex-col justify-center lg:flex-row py-18 px-6 sm:py-10 md:px-24 md:py-20 lg:py-32 lg:px-12 gap-16 lg:gap-28 xl:max-w-[1325px] m-auto">
-          <div className="w-full lg:w-1/2">
-            <div className="w-full h-full md:w-[399px] md:h-[220.5px] lg:w-[558px] lg:h-[389px]">
-              <Image
-                className="w-auto h-auto"
-                src="https://i.ibb.co/v30JLYr/Group-192-2.png"
-                alt=""
-                loader={({ src }) => src}
-                unoptimized={true}
-                priority={true}
-                width={558}
-                height={389}
-              />
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <h1 className="py-4 text-3xl lg:text-4xl font-black font-sans text-gray-800">
-              Looks like you&apos;ve found the doorway to the great nothing
+      <section className="bg-white dark:bg-gray-900 h-screen flex justify-center items-center">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div className="mx-auto max-w-screen-sm text-center">
+            <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-green-600 dark:text-green-500">
+              404
             </h1>
-            <p className="py-4 text-base text-gray-800">
-              The content you&apos;re looking for doesn&apos;t exist. Either it
-              was removed, or you mistyped the link.
+            <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
+              Something&apos;s missing.
             </p>
-            <p className="py-2 text-base text-gray-800">
-              Sorry about that! Please visit our hompage to get where you need
-              to go.
+            <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
+              Sorry, we can&apos;t find that page. You&apos;ll find lots to
+              explore on the home page.{" "}
             </p>
-            <button
-              onClick={navigateHome}
-              className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-50"
+            <Link
+              href="/"
+              className="inline-flex text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-green-900 my-4"
             >
-              Go to Homepage
-            </button>
+              Back to Homepage
+            </Link>
           </div>
         </div>
-      </article>
+      </section>
     </>
   );
 }
