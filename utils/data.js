@@ -149,7 +149,47 @@ export const eventsData = [
     dateEnd: "2023-02-04T08:00:00.000Z",
   },
   {
-    id: 2,
+    id: 4,
+    title: "Cerita Cintaku 2022 Oleh Raditya Dika - Bandung",
+    imgUrl:
+      "https://res.cloudinary.com/dreamtechteam/image/upload/v1667029528/radit_fhzcut.jpg",
+    user_id: {
+      id: 1,
+      name: "Ekresa",
+      imgUrl:
+        "https://s3-ap-southeast-1.amazonaws.com/loket-production-sg/images/organization/20220613133316_62a6da2c09432.png",
+      alternativeText: "Ekresa Logo",
+    },
+    isPaid: true,
+    category: "Comedy",
+    price: 275000,
+    isOnline: false,
+    priceType: "Person",
+    dateStart: "2023-02-04T06:00:00.000Z",
+    dateEnd: "2023-02-04T08:00:00.000Z",
+  },
+  {
+    id: 3,
+    title: "Cerita Cintaku 2022 Oleh Raditya Dika - Bandung",
+    imgUrl:
+      "https://res.cloudinary.com/dreamtechteam/image/upload/v1667029528/radit_fhzcut.jpg",
+    user_id: {
+      id: 1,
+      name: "Ekresa",
+      imgUrl:
+        "https://s3-ap-southeast-1.amazonaws.com/loket-production-sg/images/organization/20220613133316_62a6da2c09432.png",
+      alternativeText: "Ekresa Logo",
+    },
+    isPaid: true,
+    category: "Comedy",
+    price: 275000,
+    isOnline: false,
+    priceType: "Person",
+    dateStart: "2023-02-04T06:00:00.000Z",
+    dateEnd: "2023-02-04T08:00:00.000Z",
+  },
+  {
+    id: 5,
     title: "Cerita Cintaku 2022 Oleh Raditya Dika - Bandung",
     imgUrl:
       "https://res.cloudinary.com/dreamtechteam/image/upload/v1667029528/radit_fhzcut.jpg",
@@ -373,3 +413,14 @@ export const eventDetail = {
     },
   },
 };
+
+export const categories = [
+  {
+    id: 1,
+    name: "Business",
+  },
+  {
+    id: 2,
+    name: "Technology",
+  },
+];

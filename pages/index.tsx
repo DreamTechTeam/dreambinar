@@ -17,6 +17,7 @@ export default function Home() {
   const [populate, setPopulate] = useState(0);
   const [isShowedMoreOrmawa, setIsShowedMoreOrmawa] = useState(false);
   const dataOrmawa = isShowedMoreOrmawa ? ormawaData : ormawaData.slice(0, 12);
+  const eventsDataFiltered = eventsData.slice(0, 3);
 
   const populateMore = () => {
     if (populate > 1) {
@@ -184,7 +185,7 @@ export default function Home() {
 
             <div className="w-full px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-3 lg:gap-4 items-stretch">
-                {eventsData.map((item, index) => (
+                {eventsDataFiltered.map((item, index) => (
                   <EventCard key={index} {...item} />
                 ))}
                 {/* grid full 1-3 */}

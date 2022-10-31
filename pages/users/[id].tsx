@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/legacy/image";
 import { useRouter } from "next/router";
-import Layout from "../../components/Layout";
+import Layout, { siteTitle } from "../../components/Layout";
 import EventItem from "../../components/ui/EventCard";
 import { eventsData } from "../../utils/data";
 
@@ -21,8 +21,8 @@ export default function User() {
   const userEvents = [...eventsData];
   const pageTitle =
     userDetail.fullName?.length > 0
-      ? `${userDetail.fullName} | Profile`
-      : `User Not Found | Profile`;
+      ? `${userDetail.fullName} Profile | ${siteTitle}`
+      : `User Profile Not Found | ${siteTitle}`;
 
   return (
     <Layout>
