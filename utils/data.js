@@ -342,3 +342,34 @@ export const developersData = {
     },
   ],
 };
+
+export const eventDetail = {
+  id: 1,
+  title: "Webinar: How to be a successful entrepreneur",
+  description:
+    "<h1>Lorem ipsum</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nunc nisl aliquam massa, eget aliquam nisl nunc vel mauris. Sed euismod, nisl vitae ultricies lacinia, nunc nisl aliquam massa, eget aliquam nisl nunc vel mauris.</p><p>List of text styling:</p><br/><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6><b>Bold Text</b><br/><i>Italic Text</i><br/><del>Deleted Text</del><br/><u>Underline Text</u><br/>CO<sub>2</sub><br/>E = MC<sup>2</sup>",
+  url: "https://www.google.com",
+  eventImages: {
+    url: "https://picsum.photos/200/300",
+  },
+  category: {
+    name: "Business",
+  },
+  priceType: "Person",
+  price: 0,
+  location: "Jakarta, Indonesia",
+  dateEvent: "2023-11-10T05:34:49.514Z",
+  dateEnd: "2023-11-10T05:34:49.514Z",
+  dateStart: "2022-10-30T05:34:49.514Z",
+  timeStart: "2022-10-30T05:34:49.514Z",
+  timeEnd: "2022-10-30T10:34:49.514Z",
+  user_id: {
+    id: 1,
+    username: "john_doe",
+    fullName: "John Doe",
+    profileImg: {
+      url: "https://picsum.photos/200/300",
+      alternativeText: "Picsum Photos",
+    },
+  },
+};
