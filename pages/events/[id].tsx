@@ -8,7 +8,7 @@ import {
   FaCalendarAlt,
   FaClock,
   FaMapMarkerAlt,
-  FaMoneyBillWave
+  FaMoneyBillWave,
 } from "react-icons/fa";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { RWebShare } from "react-web-share";
@@ -232,7 +232,7 @@ export default function EventDetail() {
                       <Link href={`/users/${data.user_id.id}`}>
                         <div className="border-t-2 border-dotted my-3"></div>
                         <div className="flex items-center">
-                          <div className="block">
+                          <div className="relative h-10 w-10 rounded-full overflow-hidden">
                             <Image
                               alt={
                                 data.user_id.profileImg.url
@@ -240,11 +240,11 @@ export default function EventDetail() {
                                   : data.user_id.username + " profile"
                               }
                               src={data.user_id.profileImg.url}
-                              className="mx-auto object-cover rounded-full h-10 w-10"
-                              width={782.66}
-                              height={346}
                               loader={({ src }) => src}
                               unoptimized={true}
+                              sizes="100%"
+                              layout="fill"
+                              objectFit="cover"
                             />
                           </div>
                           <Tooltip
