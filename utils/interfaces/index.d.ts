@@ -4,5 +4,5 @@ export type IDateFormat = (date: string | number) => string;
 export type IAbbreviateNumber = (
   nominal: int,
   suffixSymbol: string[],
-  number: int
+  floatDigit?: number
 ) => string;

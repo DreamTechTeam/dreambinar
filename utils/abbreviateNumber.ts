@@ -18,9 +18,6 @@ export const abbreviateNumber: IAbbreviateNumber = (
   suffixSymbol,
   floatDigit = 0
 ) => {
-  const validNomninal =
-    typeof nominal === "string" ? parseInt(nominal) : nominal;
-
   let tier = (Math.log10(Math.abs(nominal)) / 3) | 0;
   if (tier === 0) return nominal;
   let suffix = suffixSymbol[tier];
