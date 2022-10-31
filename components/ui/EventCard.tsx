@@ -40,15 +40,14 @@ export default function EventCard({
   return (
     <div className="w-full h-full m-auto overflow-hidden rounded-lg shadow-lg">
       <Link href={`/events/${id}`}>
-        <div className="relative block w-full">
+        <div className="relative h-40 md:h-32 lg:h-40 block w-full">
           <Image
             loader={({ src }) => src}
             alt={title}
             src={imgUrl}
-            className="object-cover w-full md:h-64 lg:h-40"
             objectFit="cover"
-            width={320}
-            height={150}
+            sizes="100%"
+            layout="fill"
             unoptimized={true}
           />
           {isOnline ? (
@@ -85,7 +84,7 @@ export default function EventCard({
             </div>
           )}
         </div>
-        <div className={`p-4`}>
+        <div className="p-4">
           <div className="block w-full h-full">
             {title.length > 24 ? (
               <>
