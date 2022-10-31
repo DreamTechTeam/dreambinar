@@ -77,7 +77,7 @@ export default function EventDetail() {
     dateEnd: "2023-11-10T05:34:49.514Z",
     dateStart: "2022-10-30T05:34:49.514Z",
     timeStart: "2022-10-30T05:34:49.514Z",
-    timeEnd: "2022-10-30T010:34:49.514Z",
+    timeEnd: "2022-10-30T10:34:49.514Z",
     user_id: {
       id: 1,
       username: "john_doe",
