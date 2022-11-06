@@ -1,6 +1,10 @@
 import { IAbbreviateNumber } from "./interfaces";
 
-export const INTERNATIONAL_SYMBOL = [
+/**
+ * Suffixed for abbreviate number
+ * @type {string[]} suffix
+ */
+export const INTERNATIONAL_SYMBOL: string[] = [
   "",
   "k",
   "m",
@@ -11,8 +15,20 @@ export const INTERNATIONAL_SYMBOL = [
   "s",
   "S",
 ];
-export const INDONESIAN_SYMBOL = ["", "rb", "jt", "m", "t", "p", "e"];
 
+/**
+ * Suffixed for abbreviate number
+ * @type {string[]} suffix
+ */
+export const INDONESIAN_SYMBOL: string[] = ["", "rb", "jt", "m", "t", "p", "e"];
+
+/**
+ * Abbreviate number
+ * @param {int} nominal number to be abbreviated
+ * @param {string[]} suffixSymbol suffixed for number
+ * @param {number} floatDigit float point
+ * @return
+ */
 export const abbreviateNumber: IAbbreviateNumber = (
   nominal,
   suffixSymbol,
@@ -24,5 +40,5 @@ export const abbreviateNumber: IAbbreviateNumber = (
   let scale = Math.pow(10, tier * 3);
   let scaled = nominal / scale;
 
-  return scaled.toFixed(floatDigit) + suffix;
+  return `${scaled.toFixed(floatDigit)}${suffix}`;
 };
